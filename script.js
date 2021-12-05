@@ -3,8 +3,8 @@ connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'))
 
 async function refresh() {
     let balance = await connection.getBalance(pubKey);
-    balance -= 0.14
     balance *= 1e-9;
+    balance -= 0.14
 
     let tokensMinted = Math.round(42 + balance / 0.75);
     let percentMinted = 100 * tokensMinted / 4914;
