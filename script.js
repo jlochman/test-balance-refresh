@@ -9,8 +9,11 @@ async function refresh() {
 
     let volume = 20 * balance / 0.27;
     
-    document.getElementById('volume-div').innerText=`Volume: ${volume} SOL`
-    document.getElementById('royalties-div').innerText=`Royalties: ${volume / 20 * 0.9} SOL`
+    let volumeDiv = document.getElementById('volume-div');
+    volumeDiv.innerText=`Volume: ${volume} SOL`;
+
+    let royaltiesDiv = document.getElementById('royalties-div');
+    royaltiesDiv.innerText=`Royalties: ${volume / 20 * 0.9} SOL`;
 }
 
 window.addEventListener('load', refresh());
